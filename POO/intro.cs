@@ -1,14 +1,27 @@
 using System;
 
-class Aula17
+class Aula10
 {
     static void Main(){
-        
+        Jogador j1=new Jogador();
+        //o new reserva a memoria e retorna os valores contruidos
+        j1.energia=200;
+        //Um novo objeto da classe Jogador
+        //Jogador nome=new Jogador();
+
+        Console.WriteLine("Energia: {0}",j1.energia);
     }
 
-    static void soma(params int[]n){
-        
-    }
+}
+
+class Jogador{
+    //nome de classe com letra maiuscula por boa pratica
+    //se não usa modificador, é uma classe publica
+
+    public int energia=100;
+    bool vivo=true;
+    //se não usado o especificador, é public
+
     
 }
 
@@ -36,5 +49,9 @@ class Aula17
         private: So podem ser acessados pela propria classe
         protect: Podem ser acessados pela propria classe e nas
                 //classes derivadas.
-        abstract:
+        abstract:os metodos não tem implementação somente os cabeçalhos
+        sealed: O metodo não pode ser redefinido
+        virtual: o metodo pode ser redifinido em uma classe derivada
+        static:o metodo pode ser chamado mesmo sem uma instaciação de
+                //um objeto
  */
