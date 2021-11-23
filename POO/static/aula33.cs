@@ -4,6 +4,9 @@ class Aula33
 {
     static void Main(){
         Jogador.iniciar("Bruno");
+        Jogador.vivo=false;
+        //é assim que se altera um atributo de uma classe
+        //para ser alterado, o mesmo tem que está public
         Jogador.info();
         //Se instancia pelo proprio nome da classe
     }
@@ -13,7 +16,7 @@ class Aula33
 static class Jogador{
 
     static int energia;
-    static bool vivo;
+    static public bool vivo;
     static string nome;
 
     static public void iniciar(string n){
@@ -31,8 +34,8 @@ static class Jogador{
 }
 
 /* 
-    Static não permite instanciar objetos dessa classe
-    Não podem ter construtores
+    Static não permite instanciar objetos dessa classe (new nome da classe)
+    Não podem ter construtores 
     Elas criam posições fixas na memoria.
 
     Toda classe static deve ter membros statics
